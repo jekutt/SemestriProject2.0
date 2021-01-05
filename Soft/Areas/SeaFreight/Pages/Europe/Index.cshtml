@@ -1,0 +1,44 @@
+﻿@page
+@using SemestriProject.Pages.Extensions
+@model SemestriProject.Soft.Areas.SeaFreight.Pages.Europe.IndexModel
+
+@{
+    Layout = "_Index";
+    var page = Model.PageUrl;
+}
+@section Create
+{
+    @Html.HypertextLinkFor(string.Empty, new Link(Constants.CreateNewLinkTitle, $"{page}/Create"))
+}
+
+<body>
+<table class="table">
+    <thead>
+    @Html.TableHeaderFor(
+        new Link(Html.DisplayNameFor(m => m.Item.Id), Model.GetSortString(m => m.Id, page)),
+        new Link(Html.DisplayNameFor(m => m.Item.Direction), Model.GetSortString(m => m.Direction, page)),
+        new Link(Html.DisplayNameFor(m => m.Item.OrderTime), Model.GetSortString(m => m.OrderTime, page)),
+        new Link(Html.DisplayNameFor(m => m.Item.LiftingCapacity), Model.GetSortString(m => m.LiftingCapacity, page)),
+        new Link(Html.DisplayNameFor(m => m.Item.ContainerType), Model.GetSortString(m => m.ContainerType, page)),
+        new Link(Html.DisplayNameFor(m => m.Item.TravelTime), Model.GetSortString(m => m.TravelTime, page))
+        )
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Items)
+    {
+        <tr>
+            @Html.TableRowFor(
+                page,
+                item.Id,
+                Html.DisplayFor(modelItem => item.Id),
+                Html.DisplayFor(modelItem => item.Direction),
+                Html.DisplayFor(modelItem => item.OrderTime),
+                Html.DisplayFor(modelItem => item.LiftingCapacity),
+                Html.DisplayFor(modelItem => item.ContainerType),
+                Html.DisplayFor(modelItem => item.TravelTime)
+                )
+        </tr>
+    }
+    </tbody>
+</table>
+</body>

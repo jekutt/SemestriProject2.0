@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@{ ViewData["Title"] = "BDK Logistic"; }
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div class="img-center">
+    <img src="" alt="">
+</div>
+<div class="text-center">
+    <p>Our site is a logistic site where you can order the transportation of goods in various ways.</p>
+    <h3 class="display-4">Search</h3>
+
+    <form id="Search" class="table" method="get" action="">
+        <input class="search2" id="Name" type="text" name="search" size="45" maxlength="200" />
+        <button type="submit" class="button btn-01">Search</button>
+
+        <script type="text/javascript">
+            document.getElementById("Search").onsubmit = function () {
+                window.location = "" +
+                    document.getElementById("Direction").value;
+                return false;
+            }
+        </script>
+    </form>
+
+</div>
