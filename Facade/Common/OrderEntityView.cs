@@ -7,6 +7,9 @@ namespace SemestriProject.Facade.Common
     public abstract class OrderEntityView : UniqueEntityView
     {
         [Required]
+        [DisplayName("Identification code/register code")]
+        public override string Id { get; set; }
+        [Required]
         [DisplayName("Custumer/Company name")]
         public string Name { get; set; }
         [Required]

@@ -6,4 +6,8 @@
     <RootNamespace>SemestriProject.Aids</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+  </ItemGroup>
+
 </Project>
