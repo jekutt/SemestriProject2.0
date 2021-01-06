@@ -10,11 +10,7 @@ namespace SemestriProject.Pages.Extensions {
             var htmlStrings = new List<object>();
             foreach (var value in values) AddValue(htmlStrings, value);
             htmlStrings.Add(new HtmlString("<td>"));
-            htmlStrings.Add(new HtmlString($"<a href=\"{page}/Edit?id={index}\">{Constants.EditLinkTitle}</a>"));
-            htmlStrings.Add(" | ");
-            htmlStrings.Add(new HtmlString($"<a href=\"{page}/Details?id={index}\">{Constants.DetailsLinkTitle}</a>"));
-            htmlStrings.Add(" | ");
-            htmlStrings.Add(new HtmlString($"<a href=\"{page}/Delete?id={index}\">{Constants.DeleteLinkTitle}</a>"));
+            
             htmlStrings.Add(new HtmlString("</td>"));
             return new HtmlContentBuilder(htmlStrings);
         }
@@ -27,11 +23,7 @@ namespace SemestriProject.Pages.Extensions {
             var htmlStrings = new List<object>();
             foreach (var value in values) AddValue(htmlStrings, value);
             htmlStrings.Add(new HtmlString("<td>"));
-            htmlStrings.Add(new HtmlString($"<a href=\"{page}/Edit?id={index}&fixedFilter={fixedFilter}&fixedValue={fixedValue}\">{Constants.EditLinkTitle}</a>"));
-            htmlStrings.Add(" | ");
-            htmlStrings.Add(new HtmlString($"<a href=\"{page}/Details?id={index}&fixedFilter={fixedFilter}&fixedValue={fixedValue}\">{Constants.DetailsLinkTitle}</a>"));
-            htmlStrings.Add(" | ");
-            htmlStrings.Add(new HtmlString($"<a href=\"{page}/Delete?id={index}&fixedFilter={fixedFilter}&fixedValue={fixedValue}\">{Constants.DeleteLinkTitle}</a>"));
+           
             htmlStrings.Add(new HtmlString("</td>"));
             return new HtmlContentBuilder(htmlStrings);
         }

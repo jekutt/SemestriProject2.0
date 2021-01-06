@@ -124,3 +124,19 @@ header {
     height: 300px;
     width: 800px;
 }
+thead tr{
+    background-color: grey; 
+}
+
+.table a {
+        color: white;
+        font-weight: bold;
+        text-align:center;
+}
+.table a:hover{
+    color: black;
+}
+.table th:hover{
+    background-color:brown;
+}
+

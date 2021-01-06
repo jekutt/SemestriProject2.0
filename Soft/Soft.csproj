@@ -29,6 +29,7 @@
 
 
   <ItemGroup>
+    <Folder Include="Pages\Shared\NewFolder\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
