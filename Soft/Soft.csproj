@@ -7,6 +7,13 @@
     <RootNamespace>SemestriProject.Soft</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Pages\Shared\NewFolder\**" />
+    <Content Remove="Pages\Shared\NewFolder\**" />
+    <EmbeddedResource Remove="Pages\Shared\NewFolder\**" />
+    <None Remove="Pages\Shared\NewFolder\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.95.4" />
@@ -29,7 +36,6 @@
 
 
   <ItemGroup>
-    <Folder Include="Pages\Shared\NewFolder\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
