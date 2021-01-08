@@ -14,7 +14,7 @@ namespace SemestriProject.Infra.Common
         public int TotalPages => getTotalPages(PageSize);
         public bool HasNextPage => PageIndex < TotalPages;
         public bool HasPreviousPage => PageIndex > 1;
-        public int PageSize { get; set; } = 6;
+        public int PageSize { get; set; } = 25;
 
         protected PaginatedRepository(DbContext c, DbSet<TData> s) : base(c, s) { }
 

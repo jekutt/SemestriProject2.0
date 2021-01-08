@@ -10,8 +10,8 @@ using SemestriProject.Soft.Data;
 namespace SemestriProject.Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210106202129_stick")]
-    partial class stick
+    [Migration("20210108162453_final")]
+    partial class final
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
